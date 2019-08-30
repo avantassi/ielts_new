@@ -1,0 +1,56 @@
+.breadcrumbs{
+
+  &__list{
+    background-color: $lightblue;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item{
+    position: relative;
+    padding: 20px;
+
+    &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      background-image: url(../img/icons/Icon_arrow_strike_right.svg);
+      width: 11px;
+      height: 18px;
+      right: -15px;
+      top: 35%;
+    }
+
+    &:nth-child(6){
+
+      &:after{
+        display: none;
+      }
+    }
+
+    &--current{
+
+      &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        background-color: $red;
+        width: 111%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+
+  &__link{
+    font-size: 16px;
+    line-height: 19px;
+    color: $darkblue;
+    text-decoration: none;
+
+    &--active {
+      font-family: 'robotomedium';
+    }
+  }
+}

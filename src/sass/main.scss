@@ -1,0 +1,19 @@
+$notebook: 970px;
+$tablets: 768px;
+$phones: 500px;
+
+@import "media.scss";
+@import "var.scss";
+@import "fonts.scss";
+@import "adjust.scss";
+
+@import "header.scss";
+@import "hero.scss";
+@import "form.scss";
+@import "courses.scss";
+@import "address.scss";
+@import "footer.scss";
+@import "breadcrumbs.scss";
+@import "select.scss";
+@import "datepicker.scss";
+@import "accordion.scss";

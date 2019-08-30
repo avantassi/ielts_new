@@ -1,0 +1,61 @@
+.courses{
+
+  &__item{
+    background-color: $blue;
+    border-radius: 8px 0px 0px 8px;
+    width: 50%;
+    padding: 60px 110px 50px 35px;
+    min-height: 250px;
+    position: relative;
+    overflow: hidden;
+
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      background: rgba(255, 255, 255, 0.09);
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      right: -25px;
+      top: -50px;
+    }
+
+    &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      background-image: url(../img/icons/Icon_agenda.svg);
+      width: 77px;
+      height: 79px;
+      right: 37px;
+      top: 15px;
+    }
+
+    &--light{
+      background-color: #6381A1;
+      border-radius: 0px 8px 8px 0px;
+
+      &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        background-image: url(../img/icons/Icon_studentscap.svg);
+        width: 82px;
+        height: 66px;
+        right: 25px;
+        top: 20px;
+      }
+    }
+  }
+
+  &__descr{
+    font-size: 18px;
+    line-height: 21px;
+    color: $white;
+    opacity: .7;
+
+  }
+}

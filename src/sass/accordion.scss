@@ -1,0 +1,132 @@
+.accordion {
+  width: 105%;
+  min-height: 0;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0 -30px;
+  padding: 10px 30px 0;
+  border: 1px solid #ABD3FF;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+//.accordion ul li:before {
+//  display: none; }
+
+.accordion .acco__title {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: $black;
+  margin: 0;
+  padding: 10px 0 20px;
+  cursor: pointer;
+  border-bottom: 1px solid #ABD3FF;
+  margin-bottom: -1px;
+  margin-left: -30px;
+  margin-right: -30px;
+  padding-left: 30px;
+  //border-top: 1px solid #fff;
+  //border-bottom: 1px solid #000;
+}
+
+.msg {
+  position: relative;
+  overflow: hidden;
+  max-height: 800px;
+  opacity: 1;
+  transform: translate(0, 0);
+  margin-top: 20px;
+}
+
+.acco__descr {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: normal;
+  color: rgba(0, 0, 0, 0.75);
+  margin: 40px 0 40px 70px;
+  position: relative; }
+.acco__descr:before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: #C12756;
+  border-radius: 50%;
+  left: -45px;
+  top: 6px; }
+
+.accordion ul {
+  list-style: none;
+  perspective: 900;
+  padding: 0;
+  margin: 0; }
+
+.accordion ul li {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+/* устанавливаем время ожидания перед воспроизведением анимации
+ * на основе нумерации в дереве элементов
+*/
+.accordion ul li {
+  animation-delay: 0.5s;
+}
+
+
+.accordion ul li i {
+  position: absolute;
+  margin-top: 15px;
+  left: 160px;
+}
+
+.accordion ul li i:before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-image: url(../img/icons/Icon_arrow_strike_right.svg);
+  width: 11px;
+  height: 18px;
+}
+
+/* Добавляем элемент трансформации указателя при переключении */
+.accordion ul li i:before {
+  transform: rotate(270deg); }
+
+/* Делаем чекбокс скрытым*/
+.accordion ul li input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  z-index: 10; }
+
+/* Когда у флажка установлен checked
+ * блок с содержанием скрыт
+*/
+.accordion ul li input[type=checkbox]:checked ~ div.msg {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  transform: translate(0, 50%); }
+
+/* А указатель показывает вниз */
+.accordion ul li input[type=checkbox]:checked ~ i:before {
+  transform: rotate(90deg); }
+
+/*  Устанавливаем эффект перехода
+ * между двумя состояниями указателя
+*/
+div.msg, ul li i:before, ul li i:after {
+  transition: all 0.5s ease-in-out; }
+
+.accordion ul li input[type=checkbox]:checked ~ .accordion{
+  border-radius: 8px 8px 0px 0px;
+}

@@ -1,0 +1,26 @@
+.datepicker--months{
+  position: absolute;
+  top: 0;
+  left: -125%;
+}
+
+.datepicker-inline{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.datepicker--content{
+  position: relative;
+}
+
+.datepicker--cell-month{
+  width: 48%;
+}
+
+.datepicker--cells-months{
+  height: auto;
+}
+
+.datepicker--days.datepicker--body, .datepicker--months.datepicker--body{
+  display: block;
+}

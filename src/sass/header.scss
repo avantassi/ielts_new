@@ -1,0 +1,74 @@
+.header{
+  background-color: $red;
+  padding: 10px 0;
+  position: relative;
+  z-index: 20;
+
+  &__wrap{
+    display: flex;
+  }
+
+  .arrow-down{
+    margin-left: 15px;
+    cursor: pointer;
+  }
+}
+
+.menu{
+  display: flex;
+  position: relative;
+
+  &__link{
+    font-size: 18px;
+    color: $white;
+    font-family: 'arimo', sans-serif;
+    font-style: normal;
+    text-decoration: none;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    line-height: 48px;
+  }
+
+  .dropdown-menu{
+    position: absolute;
+    background-color: $red;
+    bottom: -100%;
+    right: 0;
+    padding-right: 20px;
+    display: none;
+
+    &.active{
+      display: block;
+    }
+  }
+}
+
+.profile{
+  display: flex;
+  position: relative;
+  align-items: center;
+
+  &__name{
+    font-size: 18px;
+    color: $white;
+    font-family: 'arimobold', sans-serif;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    line-height: 48px;
+  }
+
+  .dropdown-menu{
+    position: absolute;
+    background-color: $red;
+    bottom: -100%;
+    right: 0;
+    padding-right: 20px;
+    display: none;
+
+    &.active{
+      display: block;
+    }
+  }
+}
