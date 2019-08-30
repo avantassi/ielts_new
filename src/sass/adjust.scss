@@ -157,6 +157,16 @@ p {
       top: 26px;
     }
   }
+
+  &--margin{
+    margin-top: 20px;
+  }
+
+  &--small{
+    font-size: 14px;
+    line-height: 17px;
+    color: $black;
+  }
 }
 
 .back{
@@ -176,9 +186,37 @@ p {
     color: #38638F;
     text-decoration: none;
   }
+
+  &--blue{
+
+    label{
+      flex-direction: row;
+      color: $blue-btn;
+      font-size: 12px;
+      margin-top: 0;
+    }
+
+    .form__checkbox + label:before{
+      margin-top: 0;
+      border: 1px solid $blue-btn;
+      min-width: 18px;
+    }
+
+    .form__checkbox:checked + label:before {
+      color: $white;
+      background-color: $blue-btn;
+    }
+  }
 }
 
 .star{
   color: $red;
   margin-left: 5px;
+}
+
+.unsub{
+
+  &__item{
+    margin: 10px 0 10px 20px;
+  }
 }

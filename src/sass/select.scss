@@ -64,6 +64,10 @@
 
   &__btn-wrap{
     margin-top: auto;
+
+    &--margin{
+      margin: 70px 0 70px auto;
+    }
   }
 
   &__row{
@@ -73,6 +77,10 @@
     justify-content: space-between;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
+
+    &--no-border{
+      border-bottom: none;
+    }
   }
 }
 

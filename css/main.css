@@ -278,6 +278,16 @@ p {
   top: 26px;
 }
 
+.main-text--margin {
+  margin-top: 20px;
+}
+
+.main-text--small {
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+
 .back {
   margin-right: 25px;
 }
@@ -297,9 +307,31 @@ p {
   text-decoration: none;
 }
 
+.agree--blue label {
+  flex-direction: row;
+  color: #284664;
+  font-size: 12px;
+  margin-top: 0;
+}
+
+.agree--blue .form__checkbox + label:before {
+  margin-top: 0;
+  border: 1px solid #284664;
+  min-width: 18px;
+}
+
+.agree--blue .form__checkbox:checked + label:before {
+  color: #ffffff;
+  background-color: #284664;
+}
+
 .star {
   color: #E11838;
   margin-left: 5px;
+}
+
+.unsub__item {
+  margin: 10px 0 10px 20px;
 }
 
 .header {
@@ -428,6 +460,14 @@ p {
   align-items: flex-start;
 }
 
+.form__row--wrap {
+  flex-wrap: wrap;
+}
+
+.form__row--wrap label {
+  margin-bottom: 20px;
+}
+
 .form__label {
   font-weight: 300;
   font-size: 12px;
@@ -498,7 +538,8 @@ p {
   width: 245px;
 }
 
-.form .tail-select .select-label {
+.form .tail-select .select-label,
+.form__row .tail-select .select-label {
   box-shadow: none;
   border-bottom-width: 1px;
   border-color: rgba(0, 0, 0, 0.3);
@@ -514,6 +555,15 @@ p {
 }
 
 .form .tail-select .select-label:after {
+  border: none;
+  background: url(../img/icons/Icon_arrow_down_black.svg) center center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 10px;
+  height: 7px;
+}
+
+.form__row .tail-select .select-label:after {
   border: none;
   background: url(../img/icons/Icon_arrow_down_black.svg) center center no-repeat;
   -webkit-background-size: cover;
@@ -607,7 +657,7 @@ p {
 }
 
 .form__checkbox:checked + label:before {
-  color: #000;
+  color: #000000;
 }
 
 .courses__item {
@@ -887,6 +937,10 @@ p {
   margin-top: auto;
 }
 
+.select__btn-wrap--margin {
+  margin: 70px 0 70px auto;
+}
+
 .select__row {
   display: flex;
   align-items: flex-start;
@@ -894,6 +948,10 @@ p {
   justify-content: space-between;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
+}
+
+.select__row--no-border {
+  border-bottom: none;
 }
 
 .warning {
