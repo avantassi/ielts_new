@@ -13,3 +13,18 @@ document.addEventListener("DOMContentLoaded", function(){
         /* Your Options */
     });
 });
+
+function yesnoCheck() {
+    if (document.getElementById('agent').checked) {
+        document.getElementById('hidden-label__agent').style.display = 'block';
+    }
+    else document.getElementById('hidden-label__agent').style.display = 'none';
+}
+
+function yesnoCheck2() {
+    if (document.getElementById('ielts').checked) {
+        document.getElementById('hidden-label__ielts').style.display = 'block';
+    }
+    else document.getElementById('hidden-label__ielts').style.display = 'none';
+
+}

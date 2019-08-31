@@ -1,0 +1,35 @@
+.summary{
+
+    &__row{
+        display: flex;
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(157, 176, 196, 0.48);
+        margin-right: 52.9%;
+        width: auto;
+        margin-bottom: 0;
+
+        &--no-border{
+            border-bottom: none;
+        }
+
+        .form__field{
+            border-bottom: none;
+            font-size: 18px;
+            color: $black;
+
+            &--opacity{
+                opacity: .5;
+            }
+        }
+    }
+}
+
+.print{
+    position: absolute;
+    right: 0;
+    font-size: 16px;
+    color: $blue-btn;
+    font-family: 'robotoregular', sans-serif;
+    background-color: $lightblue-rgba;
+    padding: 30px 40px;
+}

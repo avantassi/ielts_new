@@ -22,6 +22,26 @@
         margin-bottom: 20px;
       }
     }
+
+    &--margin{
+      margin-top: 20px;
+      margin-bottom: 50px;
+    }
+
+    &--width{
+      flex-direction: column;
+      margin-bottom: 0;
+
+      .form__label{
+        width: 100%;
+        max-width: none;
+      }
+
+      .tail-select, .select-label{
+        width: 100% !important;
+        margin-bottom: 10px;
+      }
+    }
   }
 
   &__label{
@@ -46,6 +66,10 @@
       margin-top: 10px;
       max-width: 190px;
     }
+
+    &--margin{
+      margin-top: 10px;
+    }
   }
 
   &__btn{
@@ -67,6 +91,15 @@
       background-color: $white;
       color: $blue-btn;
       margin-right: 30px;
+    }
+
+    &--border{
+      border: 1px solid $blue-btn;
+      background-color: transparent;
+    }
+
+    img{
+      margin-right: 10px;
     }
   }
 
@@ -214,4 +247,39 @@
 
 .form__checkbox:checked + label:before {
   color: $black;
+}
+
+.hidden-label{
+  background-color: $lightblue-rgba;
+  border-radius: 2px;
+  padding: 15px 20px 0 20px;
+  max-width: 490px;
+  position: relative;
+  margin-bottom: 30px;
+  display: none;
+
+  &:before{
+    content: '';
+    border: 12px solid transparent;
+    border-bottom: 12px solid $lightblue-rgba;
+    position: absolute;
+    left: 6%;
+    top: -24px;
+    width: 0;
+  }
+
+  label{
+    max-width: 450px;
+  }
+
+  &__input{
+    background-color: transparent;
+    width: 440px;
+    margin-bottom: 15px;
+  }
+}
+
+.symbols{
+  margin-top: 5px;
+  margin-left: auto;
 }

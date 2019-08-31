@@ -52,5 +52,9 @@
     &--active {
       font-family: 'robotomedium';
     }
+
+    &--disabled{
+      color: #9DB0C4;
+    }
   }
 }

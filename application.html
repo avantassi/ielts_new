@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=500, user-scalable=0">
+    <title>IELTS</title>
+    <link rel="stylesheet" href="css/tail.select-light.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="maincontent">
+
+        <header class="header">
+            <div class="container container--row">
+                <a href="" class="logo">
+                    <img src="img/logo_white.png" alt="" class="logo__img">
+                </a>
+                <div class="header__wrap">
+                    <nav class="menu">
+                        <a href="" class="menu__link">Help</a>
+                        <a href="" class="menu__link">English
+                            <div class="arrow-down" id="arrow-down__lang">
+                                <img src="img/icons/Icon_arrow_down_white.svg" class="icon">
+                            </div>
+                            <div class="dropdown-menu dropdown-menu__lang">
+                                <a href="" class="menu__link">Русский</a>
+                            </div>
+                        </a>
+
+                    </nav>
+                    <div class="profile">
+                        <div class="profile__name">Alina Komarova</div>
+                        <img src="img/Avatar.png" alt="" class="profile__pic">
+                        <div class="arrow-down" id="arrow-down__prof">
+                            <img src="img/icons/Icon_arrow_down_white.svg" class="icon">
+                        </div>
+                        <div class="dropdown-menu dropdown-menu__prof">
+                            <a href="" class="menu__link">Log out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="breadcrumbs">
+            <div class="container">
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__item breadcrumbs__item--current">
+                        <a href="" class="breadcrumbs__link breadcrumbs__link--disabled">Select test date</a>
+                    </li>
+                    <li class="breadcrumbs__item breadcrumbs__item--current">
+                        <a href="" class="breadcrumbs__link breadcrumbs__link--disabled">Speaking test selection</a>
+                    </li>
+                    <li class="breadcrumbs__item breadcrumbs__item--current">
+                        <a href="" class="breadcrumbs__link breadcrumbs__link--disabled">Candidate details</a>
+                    </li>
+                    <li class="breadcrumbs__item breadcrumbs__item--current">
+                        <a href="" class="breadcrumbs__link breadcrumbs__link--active">Application details</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a href="" class="breadcrumbs__link">Recognising organisations</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a href="" class="breadcrumbs__link">Booking summary</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="container">
+            <h2 class="second-title second-title--arrow second-title--darkblue">
+                <a href="candidate.html" class="back"><img src="img/icons/Icon_arrow-left.svg" alt="" class="back__img"></a>
+                Application details</h2>
+            <p class="main-text main-text--big">Are you taking this test for UK Visas and Immigration (UKVI)?
+                <span class="star">*</span>
+            </p>
+            <p class="main-text main-text--small-blue">It is the responsibility of the test taker to register for the right type of test (IELTS, IELTS UKVI, Life Skills A1 or Life Skills B1)</p>
+            <div class="select__option select__option--width select__option--margin">
+                <div class="select__item">
+                    <input type="radio" class="form__radio" name="visa" id="visa" checked>
+                    <label for="visa">Yes</label>
+                </div>
+                <div class="select__item">
+                    <input type="radio" class="form__radio" name="visa" id="visa2">
+                    <label for="visa2">No</label>
+                </div>
+            </div>
+            <p class="main-text main-text--big">Why are you taking the test? 
+                <span class="star">*</span>
+            </p>
+            <div class="form__row form__row--margin">
+                <label for="" class="form__label">
+                    <select name="" id="" class="form__select" >
+                        <option>Reason</option>
+                    </select>
+                </label>
+            </div>
+            <p class="main-text main-text--big">Are you planning to study at a university with UKVI Highly Trusted Sponsor status?
+                <span class="star">*</span>
+            </p>
+            <div class="select__option select__option--width select__option--margin">
+                <div class="select__item">
+                    <input type="radio" class="form__radio" name="sponsor" id="sponsor" checked>
+                    <label for="sponsor">Yes</label>
+                </div>
+                <div class="select__item">
+                    <input type="radio" class="form__radio" name="sponsor" id="sponsor2">
+                    <label for="sponsor2">No</label>
+                </div>
+            </div>
+            <p class="main-text main-text--big">Were you referred by an agent/partner?</p>
+            <div class="select__option select__option--width select__option--margin">
+                <div class="select__item">
+                    <input type="radio" class="form__radio" name="agent" id="agent" onclick="javascript:yesnoCheck();">
+                    <label for="agent">Yes</label>
+                </div>
+                <div class="select__item">
+                    <input type="radio" class="form__radio" name="agent" id="agent2" onclick="javascript:yesnoCheck();">
+                    <label for="agent2">No</label>
+                </div>
+            </div>
+            <div class="hidden-label" id="hidden-label__agent">
+                <label for="" class="form__label"><div>Referral partner<span class="star">*</span></div>
+                    <input type="text" class="form__field hidden-label__input" required>
+                </label>
+            </div>
+            <p class="main-text main-text--big">Have you previously taken IELTS (either Academic or General Training) before?
+                <span class="star">*</span>
+            </p>
+            <div class="select__option select__option--width select__option--margin">
+                <div class="select__item">
+                    <input type="radio" class="form__radio" name="ielts" id="ielts" onclick="javascript:yesnoCheck2();">
+                    <label for="ielts">Yes</label>
+                </div>
+                <div class="select__item">
+                    <input type="radio" class="form__radio" name="ielts" id="ielts2" onclick="javascript:yesnoCheck2();">
+                    <label for="ielts2">No</label>
+                </div>
+            </div>
+            <div class="hidden-label" id="hidden-label__ielts">
+                <label for="" class="form__label"><div>Location<span class="star">*</span></div>
+                    <input type="text" class="form__field hidden-label__input" required>
+                </label>
+                <label for="" class="form__label"><div>Date<span class="star">*</span></div>
+                    <input type="text" class="form__field hidden-label__input" required>
+                </label>
+            </div>
+            <p class="main-text main-text--big">Where are you currently studying English?</p>
+            <label for="" class="form__label form__label--margin">School or Studio
+                <input type="text" class="form__field">
+            </label>
+            <hr>
+            <h4 class="fourth-title">Identification Document</h4>
+            <p class="main-text main-text--info">
+                You must add a clear and legible copy of your ID document <br>
+                You must bring this attached ID document to the test <br>
+                This is the only form of identification that will be accepted on the test day <br>
+                It must be valid/not expired on the test day
+            </p>
+            <p class="main-text main-text--big">Type
+                <span class="star">*</span>
+            </p>
+            <div class="select__option select__option--margin select__option--row">
+                <div class="select__item">
+                    <input type="radio" class="form__radio" name="type" id="type" checked>
+                    <label for="type">Passport</label>
+                </div>
+                <div class="select__item">
+                    <input type="radio" class="form__radio" name="type" id="type2">
+                    <label for="type2">National Identity Card</label>
+                </div>
+            </div>
+            <p class="main-text main-text--type">If you are taking the test 
+                <span>outside of your home</span> country then you 
+                <span>must supply a passport document.</span></p>
+            <div class="select__row select__row--no-border select__row--no-margin">
+                <label for="" class="form__label"><div>Number<span class="star">*</span></div>
+                    <input type="text" class="form__field">
+                </label>
+                <label for="" class="form__label"><div>Identification Document Expiry Date<span class="star">*</span></div>
+                    <input type="text" class="form__field">
+                    <span class="form__label form__label--blue">Identification Document must be  valid on or after the test day</span>
+                </label>
+                <label for="" class="form__label"><div>ID Issuing Authority<span class="star">*</span></div>
+                    <input type="text" class="form__field">
+                </label>
+            </div>
+            <h4 class="fourth-title">Instructions for copy of ID</h4>
+            <div class="row">
+                <div class="column" style="width: 52.9%;">
+                    <p class="main-text">Please upload a copy of your ID document which must include 
+                    the following information</p>
+                    <ul class="unsub unsub--margin">
+                        <li class="unsub__item main-text">ID document number</li>
+                        <li class="unsub__item main-text">ID expiry date</li>
+                        <li class="unsub__item main-text">Image of yourself as seen on ID document</li>
+                        <li class="unsub__item main-text">Your name as seen on the ID document</li>
+                        <li class="unsub__item main-text">Your date of birth</li>
+                        <li class="unsub__item main-text">Signature (if it appears on ID document)</li>
+                    </ul>
+                    <p class="main-text">
+                        You can only attach one document. If your photo and signature are on separate  pages, please insert both items into a single word or PDF document.
+                    </p>
+                    <p class="main-text main-text--margin">
+                        The photo within the ID document must be clear and meet our format guidelines
+                    </p>
+                    <ul class="unsub unsub--margin">
+                        <li class="unsub__item main-text">Dimensions: at least 800 x 700 pixels</li>
+                        <li class="unsub__item main-text">Size: less than 1.5 Mb</li>
+                        <li class="unsub__item main-text">File format: tiff, jpg, doc, docx, pdf, png, gif, jpeg</li>
+                    </ul>
+                    <p class="main-text">
+                        Please ensure that the digital copy you import is clear and legible
+                    </p>
+                </div>
+                <div class="column column--thin">
+                    <a class="btn form__btn">Upload ID copy</a>
+                </div>
+            </div>
+            <div class="select__btn-wrap select__btn-wrap--margin">
+                <a href="candidate.html" class="btn form__btn form__btn--back">Step backwards</a>
+                <a href="results.html" class="btn form__btn">Save and Continue</a>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container container--row container--row-align container--red">
+                <div class="footer__item">
+                    <h3 class="third-title">About IELTS</h3>
+                    <div class="footer__row">
+                        <div class="footer__column">
+                            <a href="" class="footer__link">That's what IELTS</a>
+                            <a href="" class="footer__link">History IELTS</a>
+                            <a href="" class="footer__link">IELTS Vocabulary</a>
+                        </div>
+                        <div class="footer__column">
+                            <a href="" class="footer__link">F.A.Q.</a>
+                            <a href="" class="footer__link">IELTS Success Stories</a>
+                            <a href="" class="footer__link">Site map</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__item footer__item--border">
+                    <h3 class="third-title">Preparation</h3>
+                    <div class="footer__row">
+                        <div class="footer__column">
+                            <a href="" class="footer__link">Academic English + IELTS</a>
+                            <a href="" class="footer__link">Academic English + IELTS preparation  for teens</a>
+                            <a href="" class="footer__link">Academic English + subjects in English  for schoolchildren</a>
+                            <a href="" class="footer__link">Winter Academic Program for Pupils</a>
+                            <a href="" class="footer__link">Contacts and reviews</a>
+                        </div>
+                        <div class="footer__column">
+                            <a href="" class="footer__link">Schedule and prices</a>
+                            <a href="" class="footer__link">Self preparation</a>
+                            <a href="" class="footer__link">Free IELTS seminars</a>
+                            <a href="" class="footer__link">Sign up for IELTS courses</a>
+                            <a href="" class="footer__link">IELTS preparation</a>
+                            <a href="" class="footer__link">Trial IELTS</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__item">
+                    <h3 class="third-title">Pass IELTS</h3>
+                    <div class="footer__row">
+                        <div class="footer__column">
+                            <a href="" class="footer__link">IELTS Exam Rules</a>
+                            <a href="" class="footer__link">Scoring</a>
+                            <a href="" class="footer__link">IELTS Results</a>
+                            <a href="" class="footer__link">Additional copies</a>
+                            <a href="" class="footer__link">Appeal</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <section class="post-footer">
+            <div class="container container--row">
+                <div class="post-footer__wrap">
+                    <a href="" class="logo">
+                        <img src="img/logo_red_mini.png" alt="" class="logo__img-mini">
+                    </a>
+                    <div class="copyright">© IELTS Centre | Privacy Policy</div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+<script src="js/tail.select.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

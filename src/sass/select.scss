@@ -25,6 +25,7 @@
   &__option{
     display: flex;
     flex-direction: column;
+    position: relative;
 
     &--width{
       width: 244px;
@@ -34,6 +35,14 @@
       .form__radio + label{
         max-width: 125px;
       }
+    }
+
+    &--margin{
+      margin-top: 20px;
+    }
+
+    &--row{
+      flex-direction: row;
     }
   }
 
@@ -68,6 +77,10 @@
     &--margin{
       margin: 70px 0 70px auto;
     }
+
+    &--no-margin{
+      margin-top: 20px;
+    }
   }
 
   &__row{
@@ -80,6 +93,10 @@
 
     &--no-border{
       border-bottom: none;
+    }
+
+    &--no-margin{
+      margin-bottom: 0;
     }
   }
 }
